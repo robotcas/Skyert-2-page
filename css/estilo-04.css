@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,200&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/header-3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+nav {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  width: 140px;
+  margin-left: 20px;
+  color: #fff;
+}
+
+.bar-btn {
+  font-size: 25px;
+  color: #fff;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.nav-menu {
+  position: fixed;
+  width: 100%;
+  height: 0vh;
+  top: 100px;
+  background-image: url(../img/header-3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.nav-menu li {
+  display: none;
+  line-height: 30px;
+  margin: 50px 0;
+  transition: all 0.5s;
+}
+
+.nav-menu li a {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.nav-menu li a.active,
+.nav-menu li a:hover {
+  color: #033e8c;
+  transition: 0.3s;
+}
+
+#check {
+  display: none;
+}
+
+#check:checked ~ .nav-menu {
+  height: 100vh;
+}
+
+#check:checked ~ .nav-menu li {
+  display: block;
+}
+
+.banner-text {
+  padding: 0 30px;
+  margin-top: 300px;
+  text-align: center;
+  color: #fff;
+}
+
+.banner-text h1 {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.banner-text span {
+  color: #033e8c;
+}
+
+.banner-text h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.button1 {
+  margin-right: 40px;
+  padding: 10px 30px;
+  background-color: #033e8c;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.button1:hover {
+  background-color: #fff;
+  color: #033e8c;
+  transition: 0.5s;
+}
+
+.button2 {
+  margin-right: 40px;
+  padding: 10px 30px;
+  background-color: #fff;
+  color: #033e8c;
+  border-radius: 5px;
+}
+
+.button2:hover {
+  background-color: #033e8c;
+  color: #fff;
+  transition: 0.5s;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-left: 50px;
+  }
+
+  nav {
+    height: 100px;
+  }
+
+  .bar-btn {
+    display: none;
+  }
+
+  .nav-menu {
+    position: relative;
+    height: 100px;
+    top: 0;
+    background: none;
+    transition: none;
+    text-align: right;
+    margin-left: 50px;
+  }
+
+  .nav-menu li {
+    display: inline-block;
+    line-height: 100px;
+    margin: 0 20px;
+    transition: none;
+  }
+
+  .nav-menu li a {
+    font-size: 12px;
+  }
+
+  .banner-text h1 {
+    font-size: 70px;
+    margin-bottom: 50px;
+  }
+
+  .banner-text h2 {
+    font-size: 20px;
+  }
+
+  .button2 {
+    margin: auto;
+  }
+}
